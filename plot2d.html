@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Graph Plotter</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <script defer src="script2d.js"></script>
+</head>
+<body>
+    <h1>2D Graph Plotter</h1>
+    <p>Enter a mathematical expression:</p>
+    <input type="text" id="expression" placeholder="e.g., x**2">
+    <input type="number" id="xMin" placeholder="Min x" value="-10">
+    <input type="number" id="xMax" placeholder="Max x" value="10">
+    <button id="plotButton">Plot Graph</button>
+    <button id="downloadGraph">Download Graph</button>
+    <button class="theme-toggle">Toggle Theme</button>
+
+    <div>
+        <button onclick="navigate('index.html')">Back to Home</button>
+        <button onclick="navigate('plot3d.html')">Switch to 3D Plot</button>
+    </div>
+    <div>
+        <input type="checkbox" id="showGrid" checked> Show Grid
+        <input type="checkbox" id="showAxisLabels" checked> Show Axis Labels
+    </div>
+    <div id="graph"></div>
+    <script src="theme.js"></script>
+<script>
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Plotter - Home</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Welcome to Graph Plotter</h1>
+    <p>Select the type of graph you want to plot:</p>
+    <div>
+        <button onclick="navigate('plot2d.html')">2D Plot</button>
+        <button onclick="navigate('plot3d.html')">3D Plot</button>
+    </div>
+    <button class="theme-toggle">Toggle Theme</button>
+    <script src="theme.js"></script>
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+    </script>
+
+</body>
+
+</html>
